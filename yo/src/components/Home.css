@@ -1,0 +1,134 @@
+@font-face {
+    font-family: 'New Order';
+    src: url('/public/fonts/New Order Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roca';
+    src: url('/public/fonts/Roca Regular.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body, #root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'New Order', 'Times New Roman', Times, serif; /* Aplica a fonte 'New Order' */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: conic-gradient(
+      #4A0C7B 0deg 60deg,
+      #F05AE6 60deg 120deg,
+      #BF3032 120deg 180deg,
+      #FFB52B 180deg 240deg,
+      #28A16C 240deg 300deg,
+      #3E70E6 300deg 360deg
+    );
+    overflow: hidden;
+    position: relative; /* Torna o body o referencial para elementos posicionados absolutamente */
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute; /* Posiciona a home-container para centralizar verticalmente */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o home-container */
+}
+
+.circle-container {
+    width: 450px; /* Tamanho do círculo */
+    height: 450px; /* Tamanho do círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 50px; 
+    position: relative;
+}
+
+.logo-container {
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.home-logo {
+    width: 530px; /* Ajusta o valor conforme necessário para a logo */
+    height: 530px; /* Ajusta o valor conforme necessário para a logo */
+    object-fit: contain;
+    display: block;
+    position: absolute; /* Permite que o logo se estenda além do círculo */
+    animation: spin 45s infinite linear; /* Aplica a animação de rotação */
+}
+
+.circle-text {
+    font-size: 5em; /* Ajuste o tamanho da fonte conforme necessário */
+    color: black;
+    position: absolute;
+    text-align: center;
+}
+
+.start-button {
+    padding: 30px 100px; /* Aumenta o padding para aumentar o tamanho total do botão */
+    font-size: 2em; /* Ajuste o tamanho da fonte conforme necessário */
+    background-color: white;  /* Cor do botão */
+    color: black; /* Cor do texto */
+    border: 2px solid black; /* Borda do botão */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Roca', 'Times New Roman', Times, serif; /* Aplica a fonte 'Roca' */
+    position: absolute; /* Usa posição absoluta */
+    top: 480px; /* Ajuste conforme necessário */
+    white-space: nowrap; /* Garante que o texto não quebre dentro do botão */
+    box-sizing: border-box; /* Garante que o padding seja levado em conta no cálculo do tamanho do botão */
+}
+
+.start-button:hover {
+    background-color: #f0f0f0;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .circle-container {
+        width: 300px; /* Adjusted size for mobile */
+        height: 300px; /* Adjusted size for mobile */
+        margin-bottom: 30px; /* Adjusted margin for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .circle-container {
+        width: 200px; /* Adjusted size for smaller mobile screens */
+        height: 200px; /* Adjusted size for smaller mobile screens */
+        margin-bottom: 20px; /* Adjusted margin for smaller mobile screens */
+    }
+}

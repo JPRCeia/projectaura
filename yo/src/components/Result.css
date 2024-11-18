@@ -1,0 +1,114 @@
+@font-face {
+    font-family: '72 Brand';
+    src: url('/public/fonts/72-Bold.woff') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.result-container {
+    text-align: center;
+    min-height: 100vh;
+    padding: 40px; /* Aumenta o padding para tornar o conteúdo mais espaçado */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white; /* Mantém o fundo branco */
+}
+
+.result-container h1 {
+    margin-bottom: 40px; /* Aumentar o espaçamento inferior */
+    font-size: 3rem; /* Aumentar o tamanho da fonte */
+    color: inherit; /* Permite que a cor seja herdada do estilo inline */
+    text-align: center;
+}
+
+.result-content {
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 60px; /* Aumentar o espaçamento inferior */
+}
+
+.description-container {
+    font-family: '72 Brand', Arial, sans-serif; /* Aplica a fonte 72 Brand */
+    width: 100%;
+    text-align: left;
+    font-size: 1.5rem; /* Aumentar o tamanho da fonte */
+    color: black; /* Descrição da personalidade em preto */
+    margin-bottom: 60px; /* Aumentar a margem inferior */
+    margin-right: 160px;
+}
+
+.response-list {
+    width: 100%;
+    margin-top: 20px; /* Aumentar espaçamento superior */
+    text-align: left;
+    font-size: 1.5rem; /* Aumentar o tamanho da fonte */
+}
+
+.progress-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px; /* Aumentar o espaçamento inferior */
+    margin-left: 80px;
+}
+
+.label {
+    flex: 2;
+    text-align: left;
+    color: black;
+    margin-right: 80px; /* Aumentar o espaçamento à direita para afastar a descrição */
+    font-size: 1.2rem;
+}
+
+.label {
+    display: none; /* Oculta a label atual dentro da barra */
+}
+
+.personality-label {
+    text-align: left;
+    color: black;
+    font-size: 1.5rem; /* Aumentar o tamanho da fonte */
+    margin-bottom: 5px; /* Espaçamento inferior para afastar ligeiramente da barra */
+    margin-left: 80px;
+}
+.bar {
+    flex: 5;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 30px; /* Aumentar a altura da barra */
+}
+
+.fill {
+    height: 100%;
+}
+
+.percent {
+    flex: 1;
+    text-align: right;
+    color: black;
+    font-size: 1.5rem; /* Aumentar o tamanho da fonte */
+}
+
+.restart-button {
+    padding: 20px 40px; /* Aumentar o padding para tornar o botão maior */
+    font-size: 2rem; /* Aumentar o tamanho da fonte */
+    background-color: white;
+    color: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    max-width: 300px; /* Define a largura máxima do botão */
+    margin: 40px auto 0; /* Centraliza o botão com espaçamento */
+}
+
+.restart-button:hover {
+    background-color: #2980b9;
+    color: white;
+}
